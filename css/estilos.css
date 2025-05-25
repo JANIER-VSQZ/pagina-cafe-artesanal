@@ -134,11 +134,7 @@ main {
     border-radius: 15px;
 }
 
-.visible {
-    opacity: 1;
-    transform: translateY(0);
-    animation: aparecer 1s forwards;
-}
+
 
 .menu h2 {
     color: #5b3b27;
@@ -151,6 +147,7 @@ main {
     justify-content: center;
     gap: 1rem;
 }
+
 
 .producto {
     opacity: 0;
@@ -165,7 +162,12 @@ main {
     height: 380px;
     width: 300px;
     border-radius: 9px;
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out, opacity 0.5s ease-out;
+}
+
+.visible {
+    opacity: 1;
+    animation: aparecer 1s backwards;
 }
 
 .producto div {
@@ -179,6 +181,8 @@ main {
     transform: scale(1.05);
     box-shadow: 3px 3px 5px #412717;
 }
+
+
 
 .precio {
     color: #5c3d2e;
