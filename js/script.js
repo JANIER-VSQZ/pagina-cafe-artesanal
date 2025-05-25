@@ -10,11 +10,15 @@ document.addEventListener("DOMContentLoaded", () => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add("visible");
+            }else{
+                entry.target.classList.remove("visible");
             }
         });
     });
 
-    const div = document.getElementById("menu");
-    observer.observe(div);
-
+    const divs = document.querySelectorAll(".producto");
+    divs.forEach(div=>{
+        observer.observe(div);
+    })
+    
 });
