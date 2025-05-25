@@ -1,0 +1,354 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f4e1d2;
+    margin: 0px;
+}
+
+header {
+    background-color: #5c3d2e;
+    color: white;
+    padding: 10px;
+}
+
+#opciones {
+    display: none;
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    top: 15%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(242, 224, 211, 0.7);
+    transition: transform 0.3s ease-in-out;
+    border-radius: 9px;
+}
+
+#opciones.active {
+    display: flex;
+}
+
+header #opciones ul {
+    list-style: none;
+    padding: 0px;
+    width: 100%;
+    gap: 0.5 rem;
+}
+
+header #opciones li a {
+    display: inline-block;
+    padding: 0.75rem 1.5rem 0.75rem 1.5rem;
+    color: #5c3d2e;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+header #opciones li a:hover {
+    background-color: rgba(161, 130, 98, 0.7);
+}
+
+#menu-hamburguesa {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.7rem;
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: 1rem;
+    position: absolute;
+    top: 5%;
+    left: 90%;
+    transform: translate(-50%, -50%);
+}
+
+.hero-panel {
+    flex: 0 0 100%;
+    position: relative;
+    width: 100%;
+    height: 80vh;
+}
+
+.hero-panel img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+
+}
+
+.hero-panel div {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    top: 80%;
+    left: 50%;
+    background-color: rgba(242, 224, 211, 0.7);
+    padding: 1rem;
+    box-shadow: 1px 1px 3px #000;
+    border-radius: 9px;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 75%;
+    height: 35%;
+    padding: 0px 10px;
+    color: #5b3b27;
+}
+
+.titulo h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 0px;
+    margin: 0px;
+}
+
+.titulo p {
+    font-size: 1.4rem;
+    margin: 5px 0px;
+}
+
+main {
+    max-width: 1024px;
+    padding: auto;
+    margin: auto;
+}
+
+.invitacion{
+    color:#5b3b27;
+    width: 99%;
+    padding: 10px;
+    border-radius: 9px;
+    text-align: left;
+    margin: 1rem 0rem 2rem 0rem;
+}
+
+.menu {
+    margin: 5px;
+    padding: 10px;
+    background-color: rgba(161, 130, 98, 0.7);
+    border-radius: 15px;
+    opacity: 0;
+}
+
+.visible {
+    opacity: 1;
+    transform: translateY(0);
+    animation: aparecer 3s forwards;
+}
+
+.menu h2 {
+    color: #5b3b27;
+    font-size: 3rem;
+}
+
+.productos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.producto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #8b5a3c;
+    color: white;
+    margin: 5px;
+    padding: 5px;
+    height: 380px;
+    width: 300px;
+    border-radius: 9px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.producto div {
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    justify-content: space-between;
+}
+
+.producto:hover {
+    transform: scale(1.05);
+    box-shadow: 3px 3px 5px #412717;
+}
+
+.precio {
+    color: #5c3d2e;
+    font-weight: bold;
+    background-color: #f4e1d2;
+    width: 64px;
+    height: 30px;
+    border-radius: 50%;
+
+}
+
+.producto div p {
+    margin: 10px 0px 0px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer {
+    background-color: #5c3d2e;
+    color: white;
+    padding: 10px;
+}
+
+@media(min-width: 375px){
+    #opciones {
+        top: 15%;
+        left: 75%;
+    }
+}
+
+@media(min-width: 425px){
+    #opciones {
+        top: 15%;
+        left: 78%;
+    }
+}
+
+@media(min-width: 768px) {
+    #opciones {
+        top: 15%;
+        left: 83%;
+    }
+}
+
+@media(min-width: 1024px) {
+    .invitacion{
+        font-size: 1.5rem;
+    }
+
+    .titulo {
+        gap: 3rem;
+    }
+
+    .titulo h1 {
+        font-size: 4rem;
+        font-weight: bold;
+        padding: 0px;
+        margin: 0px;
+    }
+
+    .titulo p {
+        font-size: 2rem;
+        margin: 5px 0px;
+    }
+
+    #opciones {
+        display: block;
+        width: 100%;
+        height: 60px;
+        position: absolute;
+        top: 5%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: rgba(242, 224, 211, 0.7);
+    }
+
+    header #opciones ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        list-style: none;
+        padding: 0px;
+        width: 99%;
+        gap: 0.5 rem;
+    }
+
+    #menu-hamburguesa {
+        display: none;
+    }
+}
+
+@media(min-width: 2300px) {
+
+    .invitacion{
+        font-size: 3rem;
+    }
+
+    .titulo {
+        gap: 3rem;
+    }
+
+    .titulo h1 {
+        font-size: 8rem;
+        font-weight: bold;
+        padding: 0px;
+        margin: 0px;
+    }
+
+    .titulo p {
+        font-size: 4rem;
+        margin: 5px 0px;
+    }
+
+    #opciones {
+        display: block;
+        width: 100%;
+        height: 120px;
+        position: absolute;
+        top: 5%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: rgba(242, 224, 211, 0.7);
+
+    }
+
+    header #opciones ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        list-style: none;
+        padding: 0px;
+        width: 99%;
+        gap: 0.5 rem;
+        font-size: 2rem;
+    }
+
+    #menu-hamburguesa {
+        display: none;
+    }
+
+    main {
+        max-width: 2048px;
+    }
+
+    footer {
+        font-size: 2rem;
+    }
+
+    .producto {
+        height: 760px;
+        width: 600px;
+    }
+
+    .producto img {
+        height: 640px;
+        width: 560;
+    }
+
+    .producto div {
+        font-size: 2rem;
+    }
+
+    .precio {
+        height: 60px;
+        width: 128px;
+    }
+}
+
+@keyframes aparecer {
+    from { opacity: 0; transform: translateY(50px); }
+    to { opacity: 1; transform: translateY(0); }
+}
